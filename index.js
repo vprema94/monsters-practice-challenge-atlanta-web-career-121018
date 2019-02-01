@@ -8,13 +8,14 @@ function setupPage() {
 function addMonster (event) {
   event.preventDefault();
   let name = event.target.name.value
-  let sprite = event.target.sprite.value
-  createPokemon(name, sprite).then(renderPokemon)
+  let age = event.target.age.value
+  let description = event.target.description.value
+  createMonster(name, age, description).then(renderMonster)
 }
 
 function addFormHandler() {
   let form = document.querySelector("form");
-  form.addEventListener('submit', addPokemon)
+  form.addEventListener('submit', addMonster)
 }
 
 function renderAllMonsters() {
